@@ -1,7 +1,9 @@
 <template>
+  <v-app style="background:none">
+ 
+
     <v-container class="music-player">
-      <v-card class="mx-auto" max-width="600" elevation="0">
-        <v-card-title class="headline">Music Player</v-card-title>
+      <v-card class="mx-auto" max-width="600" elevation="0" color="transparent">
         <v-card-text>
           <v-row class="track-info" justify="center">
             <v-col cols="12" class="text-center">
@@ -9,8 +11,9 @@
                 :src="currentTrack.image"
                 max-width="200"
                 class="mx-auto mb-4"
+                style="border-radius:50%"
               ></v-img>
-              <h2>{{ currentTrack.title }}</h2>
+              <h2 style="color:white">{{ currentTrack.title }}</h2>
               <p>{{ currentTrack.artist }}</p>
             </v-col>
           </v-row>
@@ -22,7 +25,7 @@
             <v-icon large class="ma-2" @click="nextTrack">mdi-skip-next</v-icon>
           </v-row>
           <v-row class="progress" align="center" justify="center">
-            <v-col cols="2" class="text-center">{{ formatTime(currentTime) }}</v-col>
+            <v-col cols="2" class="text-center" style="color:white">{{ formatTime(currentTime) }}</v-col>
             <v-col cols="8">
               <v-slider
                 v-model="currentTime"
@@ -32,11 +35,12 @@
                 color="orange"
               ></v-slider>
             </v-col>
-            <v-col cols="2" class="text-center">{{ formatTime(currentTrack.duration) }}</v-col>
+            <v-col cols="2" class="text-center"  style="color:white">{{ formatTime(currentTrack.duration) }}</v-col>
           </v-row>
         </v-card-text>
       </v-card>
     </v-container>
+      </v-app>
   </template>
   
   <script>
