@@ -2,7 +2,8 @@
   <v-app style="background:url('public/gradient-music-notes-background_23-2151270122.avif')">
 >
 <v-app-bar app color="black">
-<v-btn to="/">Home</v-btn>
+<v-btn to="/
+">Home</v-btn>
       <v-toolbar-title>My Music App</v-toolbar-title>
     </v-app-bar>
   <v-container>
